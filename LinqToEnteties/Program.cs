@@ -9,16 +9,17 @@ namespace LinqToEnteties
     {
         static void Main(string[] args)
         {
-            int[] numbers = 
+            string[] cars =
             {
-                1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,20
+                "Mercedes", "Porshe", "Toyota", "VAZ", "OKA", "KAMAZ", "Nissan", "Reno", "KIA",
+                "Folkswagen"
             };
-            Func<int, bool> GreaterThanTwo = i => i > 2;
-            var numbersFiltered = numbers.Where(GreaterThanTwo);
 
-            foreach (var number in numbersFiltered)
+            var filteredCars = cars.Where((c, i) => (i & 1) == 1);
+
+            foreach (var car in filteredCars)
             {
-                Console.WriteLine(number);
+                Console.WriteLine(car);
             }
 
             Console.ReadKey();
