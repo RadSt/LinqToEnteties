@@ -40,6 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enteties\Actor.cs" />
+    <Compile Include="Enteties\Employee.cs" />
+    <Compile Include="Enteties\EmployeeOptionEntry.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
