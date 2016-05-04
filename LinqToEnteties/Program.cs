@@ -10,23 +10,14 @@ namespace LinqToEnteties
         {
             List<Car> cars = CarsInitializer.FillCars(new Car());
 
-            var carsFiltered = cars.Select(x => new
-            {
-                x.Cars,
-                x.Name
-            })
-                .Select(c => new
-                {
-                    c.Name
-                });
+            
 
-            foreach (var car in carsFiltered)
+            foreach (var car in cars)
             {
-                foreach (var carList in car)
+                foreach (var carList in car.Cars)
                 {
-                    
+                    Console.WriteLine(car.Name + "." + carList.Name);
                 }
-                Console.WriteLine(car);
             }
 
             Console.ReadKey();
