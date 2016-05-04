@@ -11,17 +11,21 @@ namespace LinqToEnteties
             List<Car> cars = CarsInitializer.FillCars(new Car());
             Func<int, bool> hasValueAboveTwo = v => v > 2;
 
-            var carsFiltered = cars.SelectMany(x => x.Cars
-                .Select(s => s.Name )
-                .Where(s => s == "1")).ToList();
-            //.Where(hasValueAboveTwo).ToList();
-            
-            foreach (var carList in carsFiltered)
+            var carsFiltered = cars.Select(x => new
             {
-                foreach (var car  in carList)
+                x.Cars,
+                x.Name
+            })
+                .Select(c => new
                 {
-                    Console.Write(carList + ".");
-                    Console.WriteLine(car);
+                    c.Name
+                });
+
+            foreach (var car in carsFiltered)
+            {
+                foreach (var carList in car)
+                {
+                    
                 }
             }
 
