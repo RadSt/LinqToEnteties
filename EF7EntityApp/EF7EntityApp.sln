@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CCC38C80-EAE3-4505-975D-FCDC529A2CE8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DFD0E671-DE6D-4493-9409-8101465CE92B}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "EF7EntityApp", "src\EF7EntityApp\EF7EntityApp.xproj", "{2EFB710A-E594-4C4C-BC51-4451C1629447}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "EF7EntityApp.DAL", "src\EF7EntityApp.DAL\EF7EntityApp.DAL.xproj", "{9409B2F3-6DF4-4F24-A80B-BFFFF5ED9FC7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2EFB710A-E594-4C4C-BC51-4451C1629447}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EFB710A-E594-4C4C-BC51-4451C1629447}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EFB710A-E594-4C4C-BC51-4451C1629447}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EFB710A-E594-4C4C-BC51-4451C1629447}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9409B2F3-6DF4-4F24-A80B-BFFFF5ED9FC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9409B2F3-6DF4-4F24-A80B-BFFFF5ED9FC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9409B2F3-6DF4-4F24-A80B-BFFFF5ED9FC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9409B2F3-6DF4-4F24-A80B-BFFFF5ED9FC7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2EFB710A-E594-4C4C-BC51-4451C1629447} = {CCC38C80-EAE3-4505-975D-FCDC529A2CE8}
+		{9409B2F3-6DF4-4F24-A80B-BFFFF5ED9FC7} = {CCC38C80-EAE3-4505-975D-FCDC529A2CE8}
+	EndGlobalSection
+EndGlobal

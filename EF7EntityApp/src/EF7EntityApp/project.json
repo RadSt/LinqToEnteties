@@ -1,0 +1,30 @@
+﻿{
+  "version": "1.0.0-*",
+  "description": "EF7EntityApp Console Application",
+  "authors": [ "StepanovRI" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+
+  "compilationOptions": {
+    "emitEntryPoint": true
+  },
+
+  "dependencies": {
+    "EF7EntityApp.DAL": { "target": "project" }
+  },
+
+  "commands": {
+    "EF7EntityApp": "EF7EntityApp"
+  },
+
+  "frameworks": {
+    "dnx451": {
+      "dependencies": {
+        "Nancy": "2.0.0-alpha",
+        "Nancy.Hosting.Self": "2.0.0-alpha",
+        "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc1-final"
+      }
+    }
+  }
+}

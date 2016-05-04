@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "EF7EntityApp": {
+      "commandName": "EF7EntityApp",
+      "launchBrowser": true,
+      "launchUrl": "http://localhost:8888",
+      "sdkVersion": "dnx-clr-win-x64.1.0.0-rc1-update1"
+    }
+  }
+}
