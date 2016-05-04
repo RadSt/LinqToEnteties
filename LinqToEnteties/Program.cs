@@ -9,24 +9,20 @@ namespace LinqToEnteties
         static void Main(string[] args)
         {
             List<Car> cars = CarsInitializer.FillCars(new Car());
+            Func<int, bool> hasValueAboveTwo = v => v > 2;
 
-            var carsFiltered = cars.Select(x => new
+            var carsFiltered = cars.SelectMany(x => x.Cars
+                .Select(s => s.Name )
+                .Where(s => s == "1")).ToList();
+            //.Where(hasValueAboveTwo).ToList();
+            
+            foreach (var carList in carsFiltered)
             {
-                x.Cars,
-                x.Name
-            })
-                .Select(c => new
+                foreach (var car  in carList)
                 {
-                    c.Name
-                });
-
-            foreach (var car in carsFiltered)
-            {
-                foreach (var carList in car)
-                {
-                    
+                    Console.Write(carList + ".");
+                    Console.WriteLine(car);
                 }
-                Console.WriteLine(car);
             }
 
             Console.ReadKey();
@@ -42,66 +38,125 @@ namespace LinqToEnteties
         {
             public static List<Car> FillCars(Car car)
             {
-                List<Car> cars = new List<Car>(); 
-                car = new Car
+                List<Car> cars = new List<Car>()
                 {
-                    Name = "1",
-
-                    Cars = new List<Car>
+                    new Car
                     {
-                        new Car()
+                        Name = "1",
+
+                        Cars = new List<Car>
                         {
-                            Name = "1",
-                            Cars = new List<Car>()
-                        },
-                        new Car()
+                            new Car()
+                            {
+                                Name = "1",
+                                Cars = new List<Car>()
+                            },
+                            new Car()
+                            {
+                                Name = "2",
+                                Cars = new List<Car>()
+                            },
+                            new Car()
+                            {
+                                Name = "3",
+                                Cars = new List<Car>()
+                            },
+                            new Car()
+                            {
+                                Name = "4",
+                                Cars = new List<Car>()
+                            },
+                            new Car()
+                            {
+                                Name = "5",
+                                Cars = new List<Car>()
+                            },
+                            new Car()
+                            {
+                                Name = "6",
+                                Cars = new List<Car>()
+                            },
+                            new Car()
+                            {
+                                Name = "7",
+                                Cars = new List<Car>()
+                            },
+                            new Car()
+                            {
+                                Name = "8",
+                                Cars = new List<Car>()
+                            },
+                            new Car()
+                            {
+                                Name = "9",
+                                Cars = new List<Car>()
+                            },
+                            new Car()
+                            {
+                                Name = "10",
+                                Cars = new List<Car>()
+                            }
+                        }
+                    },
+                    new Car
+                    {
+                        Name = "2",
+
+                        Cars = new List<Car>
                         {
-                            Name = "2",
-                            Cars = new List<Car>()
-                        },
-                        new Car()
-                        {
-                            Name = "3",
-                            Cars = new List<Car>()
-                        },
-                        new Car()
-                        {
-                            Name = "4",
-                            Cars = new List<Car>()
-                        },
-                        new Car()
-                        {
-                            Name = "5",
-                            Cars = new List<Car>()
-                        },
-                        new Car()
-                        {
-                            Name = "6",
-                            Cars = new List<Car>()
-                        },
-                        new Car()
-                        {
-                            Name = "7",
-                            Cars = new List<Car>()
-                        },
-                        new Car()
-                        {
-                            Name = "8",
-                            Cars = new List<Car>()
-                        },
-                        new Car()
-                        {
-                            Name = "9",
-                            Cars = new List<Car>()
-                        },
-                        new Car()
-                        {
-                            Name = "10",
-                            Cars = new List<Car>()
+                            new Car()
+                            {
+                                Name = "1",
+                                Cars = new List<Car>()
+                            },
+                            new Car()
+                            {
+                                Name = "2",
+                                Cars = new List<Car>()
+                            },
+                            new Car()
+                            {
+                                Name = "3",
+                                Cars = new List<Car>()
+                            },
+                            new Car()
+                            {
+                                Name = "4",
+                                Cars = new List<Car>()
+                            },
+                            new Car()
+                            {
+                                Name = "5",
+                                Cars = new List<Car>()
+                            },
+                            new Car()
+                            {
+                                Name = "6",
+                                Cars = new List<Car>()
+                            },
+                            new Car()
+                            {
+                                Name = "7",
+                                Cars = new List<Car>()
+                            },
+                            new Car()
+                            {
+                                Name = "8",
+                                Cars = new List<Car>()
+                            },
+                            new Car()
+                            {
+                                Name = "9",
+                                Cars = new List<Car>()
+                            },
+                            new Car()
+                            {
+                                Name = "10",
+                                Cars = new List<Car>()
+                            }
                         }
                     }
                 };
-                cars.Add(car);
                 return cars;
             }
         }
