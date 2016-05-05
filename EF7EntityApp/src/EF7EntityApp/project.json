@@ -11,7 +11,7 @@
   },
 
   "dependencies": {
-    "EF7EntityApp.DAL": { "target": "project" }
+    "EF7EntityApp.DAL": "1.0.0-*"
   },
 
   "commands": {
