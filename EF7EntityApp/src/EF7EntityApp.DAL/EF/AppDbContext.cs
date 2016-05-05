@@ -8,7 +8,7 @@ namespace EF7EntityApp.DAL.EF
     /// <summary>
     /// Класс для подключения к БД.
     /// </summary>
-    public class Ef7EntityAppDbContext : DbContext, IEf7EntityAppDbContext
+    public class AppDbContext : DbContext, IAppDbContext
     {
         public DbSet<Customer> Customers { get; set; }
 
@@ -20,7 +20,7 @@ namespace EF7EntityApp.DAL.EF
         }
     }
 
-    public interface IEf7EntityAppDbContext
+    public interface IAppDbContext
     {
         DbSet<Customer> Customers { get; set; }
         Task<int> SaveChangesAsync(CancellationToken cancellationToken);

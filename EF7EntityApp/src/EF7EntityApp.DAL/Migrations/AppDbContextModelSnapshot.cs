@@ -7,8 +7,8 @@ using EF7EntityApp.DAL.EF;
 
 namespace EF7EntityApp.DAL.Migrations
 {
-    [DbContext(typeof(Ef7EntityAppDbContext))]
-    partial class Ef7EntityAppDbContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(AppDbContext))]
+    partial class AppDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {

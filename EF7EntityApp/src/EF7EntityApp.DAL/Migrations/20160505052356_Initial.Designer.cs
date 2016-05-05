@@ -7,8 +7,8 @@ using EF7EntityApp.DAL.EF;
 
 namespace EF7EntityApp.DAL.Migrations
 {
-    [DbContext(typeof(Ef7EntityAppDbContext))]
-    [Migration("20160504172638_Initial")]
+    [DbContext(typeof(AppDbContext))]
+    [Migration("20160505052356_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -14,7 +14,7 @@ namespace EF7EntityApp
         protected override void ConfigureApplicationContainer(TinyIoCContainer container)
         {
             container.Register<IRootPathProvider, ApplicationEnvironmentRootPathProvider>();
-            container.Register<IEf7EntityAppDbContext, Ef7EntityAppDbContext>();
+            container.Register<IAppDbContext, AppDbContext>();
             base.ConfigureApplicationContainer(container);
         }
 
