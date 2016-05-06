@@ -26,5 +26,11 @@
         "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc1-final"
       }
     }
-  }
+  },
+
+  "exclude": [ "wwwroot", "node_modules" ],
+  "publishExclude": [
+    "**.user",
+    "**.vspscc"
+  ]
 }

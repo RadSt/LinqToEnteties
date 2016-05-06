@@ -2,10 +2,10 @@
   "compilerOptions": {
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "module": "system",
-    "moduleResolution": "node",
-    "noImplicitAny": false,
+    "module": "commonjs",
     "noEmitOnError": true,
+    "noImplicitAny": false,
+    "outDir": "../wwwroot/app/",
     "removeComments": false,
     "sourceMap": true,
     "target": "es5"
